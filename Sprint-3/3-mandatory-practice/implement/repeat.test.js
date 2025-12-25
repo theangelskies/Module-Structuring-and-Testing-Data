@@ -17,12 +17,12 @@ test("should repeat the string count times", () => {
     });
 
 // case: handle Count of 1:
-test("should return the original string when count is 1", () => {
-  expect(repeat("hello", 1)).toEqual("hello");
-});
 // Given a target string str and a count equal to 1,
 // When the repeat function is called with these inputs,
 // Then it should return the original str without repetition, ensuring that a count of 1 results in no repetition.
+test("should return the original string when count is 1", () => {
+  expect(repeat("hello", 1)).toEqual("hello");
+});
 
 // case: Handle Count of 0:
 // Given a target string str and a count equal to 0,
