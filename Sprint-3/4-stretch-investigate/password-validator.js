@@ -3,6 +3,11 @@ function passwordValidator(password, previousPasswords = []) {
   if (password.length < 5) {
     return false;
   }
+  // Rule 2: at least one uppercase letter
+  if (!/[A-Z]/.test(password)) {
+    return false;
+  }
+  
   // If all checks pass, password is valid
   return true;
 }
