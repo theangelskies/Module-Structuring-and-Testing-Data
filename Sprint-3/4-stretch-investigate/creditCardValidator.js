@@ -8,6 +8,12 @@ function isValidCreditCard(cardNumber) {
     return false;
   }
 
+  // Rule 2: Must contain at least two different digits
+  const uniqueDigits = new Set(cardNumber);
+  if (uniqueDigits.size < 2) {
+    return false;
+  }
+
   // If all rules pass, the credit card number is valid
   return true;
 }
@@ -17,6 +23,7 @@ function isValidCreditCard(cardNumber) {
   /* ---------- Test cases ---------- */
 console.log(isValidCreditCard("9999777788880000")); // true
 console.log(isValidCreditCard("999777788880000")); // false (15 digits)
+console.log(isValidCreditCard("4444444444444444")); // false (only one type of digit)
 
 
 module.exports = isValidCreditCard;
