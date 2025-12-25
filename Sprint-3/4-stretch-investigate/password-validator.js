@@ -15,5 +15,8 @@ function passwordValidator(password, previousPasswords = []) {
   if (!/[a-z]/.test(password)) {
     return false;
   }
-
+  // Rule 4: at least one number
+  if (!/[0-9]/.test(password)) {
+    return false;
+  }
 module.exports = passwordValidator;
