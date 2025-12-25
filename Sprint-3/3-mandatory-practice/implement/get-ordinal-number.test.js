@@ -20,5 +20,20 @@ test("should return '3rd' for 3", () => {
 test("should return '4th' for 4", () => {
   expect(getOrdinalNumber(4)).toEqual("4th");
 });
+test("should return '11th' for 11", () => {
+  expect(getOrdinalNumber(11)).toEqual("11th");
+});
+
+test("should return '12th' for 12", () => {
+  expect(getOrdinalNumber(12)).toEqual("12th");
+});
+
+test("should return '22nd' for 22", () => {
+  expect(getOrdinalNumber(22)).toEqual("22nd");
+});
+test("should return '23rd' for 23", () => {
+  expect(getOrdinalNumber(23)).toEqual("23rd");
+});
+
 
 
