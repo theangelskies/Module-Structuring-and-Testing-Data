@@ -18,6 +18,15 @@ function isValidCreditCard(cardNumber) {
   if (lastDigit % 2 !== 0) {
     return false;
   }
+  // Rule 4: Sum of all digits must be greater than 16
+  let sum = 0;
+  for (let digit of cardNumber) {
+    sum += Number(digit); // Convert each character to a number and add it
+  }
+
+  if (sum <= 16) {
+    return false;
+  }
 
   // If all rules pass, the credit card number is valid
   return true;
@@ -31,5 +40,6 @@ console.log(isValidCreditCard("999777788880000")); // false (15 digits)
 console.log(isValidCreditCard("4444444444444444")); // false (only one type of digit)
 console.log(isValidCreditCard("a92332119c011112")); // false (contains non-numeric characters)
 console.log(isValidCreditCard("6666666666666661"));// false (final digit is odd)
+console.log(isValidCreditCard("1111111111111110")); // false (sum of digits not greater than 16)
 
 module.exports = isValidCreditCard;
