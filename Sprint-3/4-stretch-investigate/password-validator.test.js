@@ -23,5 +23,16 @@ describe("Password Validator", () => {
 
     expect(isValidPassword(password, previousPasswords)).toBe(true);
   });
-  
+    test("password with less than 5 characters is invalid", () => {
+      expect(isValidPassword("A1!a")).toBe(false);
+    });
+
+    test("password without uppercase letter is invalid", () => {
+      expect(isValidPassword("abc1!")).toBe(false);
+    });
+
+    test("password without lowercase letter is invalid", () => {
+      expect(isValidPassword("ABC1!")).toBe(false);
+    });
+
 });

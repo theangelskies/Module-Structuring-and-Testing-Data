@@ -7,10 +7,13 @@ function passwordValidator(password, previousPasswords = []) {
   if (!/[A-Z]/.test(password)) {
     return false;
   }
-  
+
   // If all checks pass, password is valid
   return true;
 }
-
+  // Rule 3: at least one lowercase letter
+  if (!/[a-z]/.test(password)) {
+    return false;
+  }
 
 module.exports = passwordValidator;
