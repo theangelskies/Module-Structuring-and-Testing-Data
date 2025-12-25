@@ -34,8 +34,4 @@ describe("Password Validator", () => {
   test("password without lowercase letter is invalid", () => {
     expect(isValidPassword("ABC1!")).toBe(false);
   });
-  // Rule 5: at least one allowed symbol
-  if (!/[!#$%.*&]/.test(password)) {
-    return false;
-  }
 });
