@@ -24,6 +24,7 @@ function isValidCreditCard(cardNumber) {
 console.log(isValidCreditCard("9999777788880000")); // true
 console.log(isValidCreditCard("999777788880000")); // false (15 digits)
 console.log(isValidCreditCard("4444444444444444")); // false (only one type of digit)
+console.log(isValidCreditCard("a92332119c011112")); // false (contains non-numeric characters)
 
 
 module.exports = isValidCreditCard;
