@@ -38,4 +38,8 @@ describe("Password Validator", () => {
       expect(isValidPassword("Abc!@")).toBe(false);
     });
 
+  test("password without symbol is invalid", () => {
+    expect(isValidPassword("Abc12")).toBe(false);
+  });
+
 });
