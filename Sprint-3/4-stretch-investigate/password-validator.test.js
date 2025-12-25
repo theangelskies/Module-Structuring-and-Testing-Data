@@ -34,4 +34,8 @@ describe("Password Validator", () => {
   test("password without lowercase letter is invalid", () => {
     expect(isValidPassword("ABC1!")).toBe(false);
   });
+    test("password without number is invalid", () => {
+      expect(isValidPassword("Abc!@")).toBe(false);
+    });
+
 });
