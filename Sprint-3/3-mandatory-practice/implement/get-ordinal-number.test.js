@@ -14,3 +14,7 @@ test("should return '1st' for 1", () => {
 test("should return '2nd' for 2", () => {
   expect(getOrdinalNumber(2)).toEqual("2nd");
 });
+test("should return '3rd' for 3", () => {
+  expect(getOrdinalNumber(3)).toEqual("3rd");
+});
+
