@@ -21,8 +21,7 @@
 // Finally, correct the code to fix the problem
 // =============> write your new code here
 function convertToPercentage(decimalNumber) {
-  const percentage = `${decimalNumber * 100}%`;
-  return percentage;
+  return `${decimalNumber * 100}%`;
 }
 
 const result = convertToPercentage(0.5);
