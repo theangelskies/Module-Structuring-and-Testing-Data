@@ -13,7 +13,7 @@ console.log(result);
 
 // a) How many variable declarations are there in this program?
 // There are 6 variable declarations in this program
-// Lines: 1, 3, 5, 6, 7, 9
+// Lines: 1, 3, 4, 6, 7, 9
 
 // b) How many function calls are there?
 // There is 1 function call in this program
