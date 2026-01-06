@@ -18,7 +18,8 @@
 // priceAfterOneYear.replaceAll("," "") 
 // Number(priceAfterOneYear.replaceAll("," "")) 
 // console.log(...) 
-// Total: 5 function calls 
+//Implicit function calls - toString()
+// Total: More than 5 function calls 
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 // There is a syntax error: a missing comma between the arguments of replaceAll.
