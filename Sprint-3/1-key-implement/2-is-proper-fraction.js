@@ -7,8 +7,13 @@
 // complete the rest of the tests and cases
 // write one test at a time, and make it pass, build your solution up methodically
 
+// function isProperFraction(numerator, denominator) {
+//     if (numerator < denominator) return true;
+// }
+
+
 function isProperFraction(numerator, denominator) {
-    if (numerator < denominator) return true;
+  return Math.abs(numerator) < Math.abs(denominator);
 }
 
 // here's our helper again
@@ -41,6 +46,7 @@ assertEquals(improperFraction, false);
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
 const negativeFraction = isProperFraction(-4, 7);
 // ====> complete with your assertion
+assertEquals(negativeFraction, true);
 
 // Equal Numerator and Denominator check:
 // Input: numerator = 3, denominator = 3
@@ -48,6 +54,24 @@ const negativeFraction = isProperFraction(-4, 7);
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 const equalFraction = isProperFraction(3, 3);
 // ====> complete with your assertion
+assertEquals(equalFraction, false);
+
+
 
 // Stretch:
 // What other scenarios could you test for?
+// Negative denominator
+assertEquals(isProperFraction(3, -5), true);
+// Both numerator and denominator negative
+assertEquals(isProperFraction(-2, -6), true);
+// Zero numerator
+assertEquals(isProperFraction(0, 4), true);
+// Zero denominator (should ideally handle this case in the function)
+assertEquals(isProperFraction(3, 0), false); // Note: Division by zero is undefined, so the function should ideally handle this case appropriately. 
+// Large numbers
+assertEquals(isProperFraction(1000000, 2000000), true);
+// Large improper fraction
+assertEquals(isProperFraction(2000000, 1000000), false);
+// Decimal numbers
+assertEquals(isProperFraction(2.5, 3.5), true);
+assertEquals(isProperFraction(4.5, 4.0), false);
